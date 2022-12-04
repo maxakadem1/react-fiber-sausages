@@ -25,7 +25,7 @@ function Caption({ children }) {
       position={[0, 0, 0]}
       lineHeight={0.8}
       font="/Ki-Medium.ttf"
-      fontSize={width / 14}
+      fontSize={width / 10}
       material-toneMapped={false}
       anchorX="center"
       anchorY="middle">
