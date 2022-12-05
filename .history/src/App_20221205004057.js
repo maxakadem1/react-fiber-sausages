@@ -26,10 +26,11 @@ function Caption({ children }) {
     <Text
       position={[0, 0, 0]}
       lineHeight={0.8}
-      font="./fonts/ki.otf"
+      font="/fonts/ki.otf"
       fontSize={width / 14}
       material-toneMapped={false}
       anchorX="center"
+      anchorY="center"
       anchorY="middle">
       {children}
     </Text>

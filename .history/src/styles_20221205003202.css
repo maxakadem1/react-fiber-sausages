@@ -4,10 +4,6 @@
   font-family: 'Raygun';
   src: url('/src/fonts/raygun.otf');
 }
-@font-face {
-  font-family: 'Ki';
-  src: url('/src/fonts/ki.otf');
-}
 
 * {
   box-sizing: border-box;

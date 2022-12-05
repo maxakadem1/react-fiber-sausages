@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import 'styles.css'
 import { Suspense } from 'react'
 import { Canvas, useThree, useFrame } from '@react-three/fiber'
 import { Text } from '@react-three/drei'
@@ -26,7 +27,7 @@ function Caption({ children }) {
     <Text
       position={[0, 0, 0]}
       lineHeight={0.8}
-      font="./fonts/ki.otf"
+      font="/src/fonts/ki.otf"
       fontSize={width / 14}
       material-toneMapped={false}
       anchorX="center"
