@@ -1,7 +1,7 @@
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
 @font-face {
-  font-family: 'Raygun';
+  font-family: 'EntezareZohoor2';
   src: url('/src/raygun.otf');
 }
 
@@ -22,7 +22,7 @@ body,
 body {
   overscroll-behavior-y: none;
   background: #f5f5f5;
-  font-family: 'Inter var', sans-serif;
+  font-family: 'EntezareZohoor2', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: white;

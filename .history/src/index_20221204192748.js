@@ -17,7 +17,7 @@ function Overlay() {
         digital art
       </a>
       <a
-        href="https://drive.google.com/file/d/1VA9ZQAeKW2E_S-GShYx-wdYNhFdHFX1s/view?usp=sharing"
+        href="../public/MaximAbdulkhalikov_resume2.pdf"
         target={'_blank'}
         style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }}>
         resume

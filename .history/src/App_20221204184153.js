@@ -4,8 +4,8 @@ import { Canvas, useThree, useFrame } from '@react-three/fiber'
 import { Text } from '@react-three/drei'
 import { LayerMaterial, Depth, Noise } from 'lamina'
 import Noodles from './Noodles'
-
-const caption = `HELLO\nI AM\nMAXIM\nABDULKHALIKOV`
+import { RenderPixelatedPass } from 'three-stdlib'
+extend({ RenderPixelatedPass })
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
       <Bg />
       <Suspense fallback={null}>
         <Noodles />
-        <Caption>{caption}</Caption>
+        <Caption>{`HELLO\nI AM\nMAXIM\nABDULKHALIKOV`}</Caption>
         <Rig />
       </Suspense>
     </Canvas>
@@ -26,7 +26,7 @@ function Caption({ children }) {
     <Text
       position={[0, 0, 0]}
       lineHeight={0.8}
-      font="./ki-w05-medium.otf"
+      font="/Ki-Medium.ttf"
       fontSize={width / 14}
       material-toneMapped={false}
       anchorX="center"

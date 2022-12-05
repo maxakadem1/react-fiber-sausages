@@ -5,15 +5,14 @@ import { Text } from '@react-three/drei'
 import { LayerMaterial, Depth, Noise } from 'lamina'
 import Noodles from './Noodles'
 
-const caption = `HELLO\nI AM\nMAXIM\nABDULKHALIKOV`
-
 export default function App() {
   return (
     <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }}>
       <Bg />
       <Suspense fallback={null}>
         <Noodles />
-        <Caption>{caption}</Caption>
+        <Caption>{`HELLO\nI AM\nMAXIM\nABDULKHALIKOV`}</Caption>
+        <Caption2>{`stuff`}</Caption2>
         <Rig />
       </Suspense>
     </Canvas>
@@ -26,8 +25,23 @@ function Caption({ children }) {
     <Text
       position={[0, 0, 0]}
       lineHeight={0.8}
-      font="./ki-w05-medium.otf"
+      font="/Ki-Medium.ttf"
       fontSize={width / 14}
+      material-toneMapped={false}
+      anchorX="center"
+      anchorY="middle">
+      {children}
+    </Text>
+  )
+}
+function Caption2({ children }) {
+  const { width } = useThree((state) => state.viewport)
+  return (
+    <Text
+      position={[-0.65, -0.5, 0]}
+      lineHeight={0.8}
+      font="/Ki-Medium.ttf"
+      fontSize={width / 18}
       material-toneMapped={false}
       anchorX="center"
       anchorY="middle">

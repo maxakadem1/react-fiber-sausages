@@ -5,7 +5,7 @@ import { Text } from '@react-three/drei'
 import { LayerMaterial, Depth, Noise } from 'lamina'
 import Noodles from './Noodles'
 
-const caption = `HELLO\nI AM\nMAXIM\nABDULKHALIKOV`
+caption = ``
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ function Caption({ children }) {
     <Text
       position={[0, 0, 0]}
       lineHeight={0.8}
-      font="./ki-w05-medium.otf"
+      font="/Ki-Medium.ttf"
       fontSize={width / 14}
       material-toneMapped={false}
       anchorX="center"

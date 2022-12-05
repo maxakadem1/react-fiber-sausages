@@ -26,7 +26,7 @@ function Caption({ children }) {
     <Text
       position={[0, 0, 0]}
       lineHeight={0.8}
-      font="./ki-w05-medium.otf"
+      font="./src/ki-w05-medium.otf"
       fontSize={width / 14}
       material-toneMapped={false}
       anchorX="center"
