@@ -57,14 +57,17 @@ function Overlay() {
           I’m a graphic designer <br /> UX/UI designer <br />
           front-end web developer
         </div>
+        
       </div>
-      <div
-        className="cursor"
-        style={{
-          left: cursorX + 'px',
-          top: cursorY + 'px'
-        }}></div>
     </div>
+    <div
+          className="cursor"
+          style={{
+            left: cursorX + 'px',
+            top: cursorY + 'px'
+          }}>
+            
+          </div>
   )
 }
 

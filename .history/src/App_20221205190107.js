@@ -13,7 +13,7 @@ export default function App() {
       <Bg />
       <Suspense fallback={null}>
         <Noodles />
-        {/* <Caption>{caption}</Caption> */}
+        <Caption>{caption}</Caption>
         <Rig />
       </Suspense>
     </Canvas>
@@ -23,7 +23,15 @@ export default function App() {
 function Caption({ children }) {
   const { width } = useThree((state) => state.viewport)
   return (
-    <Text position={[0, 0, 0]} lineHeight={0.8} fontSize={width / 14} material-toneMapped={false} anchorX="center" anchorY="middle">
+    <Text
+      position={[0, 0, 0]}
+      lineHeight={0.8}
+      // cahnge font
+
+      fontSize={width / 14}
+      material-toneMapped={false}
+      anchorX="center"
+      anchorY="middle">
       {children}
     </Text>
   )
@@ -40,8 +48,8 @@ function Bg() {
     <mesh scale={100}>
       <boxGeometry args={[1, 1, 1]} />
       <LayerMaterial side={THREE.BackSide}>
-        <Depth colorB="black" colorA="black" alpha={1} mode="normal" near={130} far={300} origin={[100, 100, -100]} />
-        <Noise mapping="local" type="white" scale={1000} colorA="gray" colorB="black" mode="subtract" alpha={0.15} />
+        <Depth colorB="red" colorA="skyblue" alpha={1} mode="normal" near={130} far={200} origin={[100, 100, -100]} />
+        <Noise mapping="local" type="white" scale={1000} colorA="white" colorB="black" mode="subtract" alpha={0.1} />
       </LayerMaterial>
     </mesh>
   )

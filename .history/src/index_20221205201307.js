@@ -13,7 +13,7 @@ function Overlay() {
 
   const [cursorX, setCursorX] = useState()
   const [cursorY, setCursorY] = useState()
-  window.addEventListener('mousemove', (e) => {
+  window.addEventListener('mousedown', (e) => {
     setCursorX(e.pageX)
     setCursorY(e.pageY)
   })
@@ -57,13 +57,14 @@ function Overlay() {
           I’m a graphic designer <br /> UX/UI designer <br />
           front-end web developer
         </div>
+        <div
+          className="cursor"
+          style={{
+            left: cursorX,
+            top: cursorY,
+            position: 'absolute'
+          }}></div>
       </div>
-      <div
-        className="cursor"
-        style={{
-          left: cursorX + 'px',
-          top: cursorY + 'px'
-        }}></div>
     </div>
   )
 }

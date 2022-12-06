@@ -11,7 +11,6 @@
 
 * {
   box-sizing: border-box;
-  cursor: none;
 }
 
 html,
@@ -67,6 +66,4 @@ svg {
 
 a:hover ~ .cursor {
   transform: translate(-50%, -50%) scale(2);
-  /* smooth transition */
-  transition: transform 0.2s ease-in-out;
 }

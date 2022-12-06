@@ -13,7 +13,7 @@ export default function App() {
       <Bg />
       <Suspense fallback={null}>
         <Noodles />
-        {/* <Caption>{caption}</Caption> */}
+        <Caption>{caption}</Caption>
         <Rig />
       </Suspense>
     </Canvas>

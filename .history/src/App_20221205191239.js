@@ -13,7 +13,7 @@ export default function App() {
       <Bg />
       <Suspense fallback={null}>
         <Noodles />
-        {/* <Caption>{caption}</Caption> */}
+        <Caption>{caption}</Caption>
         <Rig />
       </Suspense>
     </Canvas>
@@ -23,9 +23,7 @@ export default function App() {
 function Caption({ children }) {
   const { width } = useThree((state) => state.viewport)
   return (
-    <Text position={[0, 0, 0]} lineHeight={0.8} fontSize={width / 14} material-toneMapped={false} anchorX="center" anchorY="middle">
-      {children}
-    </Text>
+    <Text position={[0, 0, 0]} lineHeight={0.8} fontSize={width / 14} material-toneMapped={false} anchorX="center" anchorY="middle"></Text>
   )
 }
 

@@ -54,8 +54,8 @@ svg {
 }
 
 .cursor {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: white;
   position: fixed;
@@ -67,6 +67,4 @@ svg {
 
 a:hover ~ .cursor {
   transform: translate(-50%, -50%) scale(2);
-  /* smooth transition */
-  transition: transform 0.2s ease-in-out;
 }

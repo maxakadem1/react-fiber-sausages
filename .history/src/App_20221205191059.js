@@ -13,7 +13,7 @@ export default function App() {
       <Bg />
       <Suspense fallback={null}>
         <Noodles />
-        {/* <Caption>{caption}</Caption> */}
+        <Caption>{caption}</Caption>
         <Rig />
       </Suspense>
     </Canvas>
@@ -40,7 +40,7 @@ function Bg() {
     <mesh scale={100}>
       <boxGeometry args={[1, 1, 1]} />
       <LayerMaterial side={THREE.BackSide}>
-        <Depth colorB="black" colorA="black" alpha={1} mode="normal" near={130} far={300} origin={[100, 100, -100]} />
+        <Depth colorB="blue" colorA="black" alpha={1} mode="normal" near={130} far={300} origin={[100, 100, -100]} />
         <Noise mapping="local" type="white" scale={1000} colorA="gray" colorB="black" mode="subtract" alpha={0.15} />
       </LayerMaterial>
     </mesh>

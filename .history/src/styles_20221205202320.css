@@ -70,3 +70,9 @@ a:hover ~ .cursor {
   /* smooth transition */
   transition: transform 0.2s ease-in-out;
 }
+
+/* smooth transition when leaving hover */
+a:hover ~ .cursor:hover {
+  transform: translate(-50%, -50%) scale(2);
+  transition: transform 0.2s ease-in-out;
+}

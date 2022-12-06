@@ -3,21 +3,11 @@ import React, { useState, useEffect } from 'react'
 import './styles.css'
 import App from './App'
 
+const handleClick = () => {
+  console.log('click')
+}
+
 function Overlay() {
-  const [helloText, setText] = useState('HELLO')
-
-  const handleClick = () => {
-    console.log('click')
-    setText('test')
-  }
-
-  const [cursorX, setCursorX] = useState()
-  const [cursorY, setCursorY] = useState()
-  window.addEventListener('mousemove', (e) => {
-    setCursorX(e.pageX)
-    setCursorY(e.pageY)
-  })
-
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
       <a href="javascript:void(0)" onClick={handleClick} style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
@@ -49,21 +39,7 @@ function Overlay() {
         style={{ position: 'absolute', top: 80, right: 40, fontSize: '13px' }}>
         instagram
       </a>
-      <div
-        className="myName"
-        style={{ position: 'absolute', top: '50%', left: '50%', fontSize: '5vw', transform: 'translate(-50%, -50%)' }}>
-        HELLO <br /> I AM <br /> MAXIM <br /> ABDULKHALIKOV
-        <div style={{ fontSize: '2.5vw', lineHeight: '1.2', fontWeight: '300' }}>
-          I’m a graphic designer <br /> UX/UI designer <br />
-          front-end web developer
-        </div>
-      </div>
-      <div
-        className="cursor"
-        style={{
-          left: cursorX + 'px',
-          top: cursorY + 'px'
-        }}></div>
+      <Text></Text>
     </div>
   )
 }
