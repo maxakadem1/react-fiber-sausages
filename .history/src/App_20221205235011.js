@@ -108,9 +108,9 @@ function Overlay() {
 
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-      <Link to="/frontend" onClick={handleClick} style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
+      <a href="/frontend" onClick={handleClick} style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
         frontend
-      </Link>
+      </a>
       <Link to="/Ux" style={{ position: 'absolute', top: 60, left: 40, fontSize: '13px' }}>
         UI/UX design
       </Link>

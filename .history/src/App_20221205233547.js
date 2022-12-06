@@ -4,11 +4,9 @@ import { Canvas, useThree, useFrame } from '@react-three/fiber'
 import { Text } from '@react-three/drei'
 import { LayerMaterial, Depth, Noise } from 'lamina'
 import Noodles from './Noodles'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './styles.css'
 import Frontend from './Frontend'
-import Ux from './Ux'
-import Art from './Art'
 
 export default function App() {
   const [caption, setText] = useState(`HELLO\nI AM\nMAXIM\nABDULKHALIKOV`)
@@ -23,16 +21,11 @@ export default function App() {
           <Rig />
         </Suspense>
       </Canvas>
+
       <Overlay />
       <Switch>
         <Route path="/frontend">
           <Frontend />
-        </Route>
-        <Route path="/ux">
-          <Ux />
-        </Route>
-        <Route path="/art">
-          <Art />
         </Route>
         <Route path="/">
           <NameOverlay />
@@ -108,24 +101,20 @@ function Overlay() {
 
   return (
     <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-      <Link to="/frontend" onClick={handleClick} style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
+      <a href="javascript:void(0)" onClick={handleClick} style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
         frontend
-      </Link>
-      <Link to="/Ux" style={{ position: 'absolute', top: 60, left: 40, fontSize: '13px' }}>
-        UI/UX design
-      </Link>
-      <Link to="/Art" style={{ position: 'absolute', top: 80, left: 40, fontSize: '13px' }}>
-        digital art
-      </Link>
+      </a>
+      <a style={{ position: 'absolute', top: 60, left: 40, fontSize: '13px' }}>UI/UX design</a>
+      <a style={{ position: 'absolute', top: 80, left: 40, fontSize: '13px' }}>digital art</a>
       <a
         href="https://drive.google.com/file/d/1VA9ZQAeKW2E_S-GShYx-wdYNhFdHFX1s/view?usp=sharing"
         target={'_blank'}
         style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }}>
         resume
       </a>
-      <Link to="/" style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
+      <a href="" style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
         home
-      </Link>
+      </a>
       <a
         href="https://www.linkedin.com/in/abdulkhalikov/"
         target={'_blank'}

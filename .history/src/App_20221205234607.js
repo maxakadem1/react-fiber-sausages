@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/frontend">
           <Frontend />
         </Route>
-        <Route path="/ux">
+        <Route path="/uxui">
           <Ux />
         </Route>
         <Route path="/art">

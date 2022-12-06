@@ -58,7 +58,7 @@ svg {
   height: 20px;
   border-radius: 50%;
 
-  border: 2px solid white;
+  border: 1px solid white;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -69,6 +69,5 @@ a:hover ~ .cursor {
   transform: translate(-50%, -50%) scale(2);
   /* smooth transition */
   transition: transform 0.2s ease-in-out;
-  background: white;
   mix-blend-mode: difference;
 }

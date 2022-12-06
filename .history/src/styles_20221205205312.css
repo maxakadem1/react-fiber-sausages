@@ -57,18 +57,16 @@ svg {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-
-  border: 2px solid white;
+  background-color: black;
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
+  mix-blend-mode: difference;
 }
 
 a:hover ~ .cursor {
   transform: translate(-50%, -50%) scale(2);
   /* smooth transition */
   transition: transform 0.2s ease-in-out;
-  background: white;
-  mix-blend-mode: difference;
 }

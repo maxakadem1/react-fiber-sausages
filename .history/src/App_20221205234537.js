@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/frontend">
           <Frontend />
         </Route>
-        <Route path="/ux">
+        <Route path="/uxui">
           <Ux />
         </Route>
         <Route path="/art">
@@ -111,12 +111,8 @@ function Overlay() {
       <Link to="/frontend" onClick={handleClick} style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
         frontend
       </Link>
-      <Link to="/Ux" style={{ position: 'absolute', top: 60, left: 40, fontSize: '13px' }}>
-        UI/UX design
-      </Link>
-      <Link to="/Art" style={{ position: 'absolute', top: 80, left: 40, fontSize: '13px' }}>
-        digital art
-      </Link>
+      <Link style={{ position: 'absolute', top: 60, left: 40, fontSize: '13px' }}>UI/UX design</Link>
+      <Link style={{ position: 'absolute', top: 80, left: 40, fontSize: '13px' }}>digital art</Link>
       <a
         href="https://drive.google.com/file/d/1VA9ZQAeKW2E_S-GShYx-wdYNhFdHFX1s/view?usp=sharing"
         target={'_blank'}
