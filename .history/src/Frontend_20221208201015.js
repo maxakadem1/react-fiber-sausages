@@ -16,19 +16,15 @@ const Front = () => {
           fontSize: '5vw',
           transform: 'translate(-50%, -50%)'
         }}>
-        <Link className="options" to="/">
+        <Link className="link" to="/">
           DEVCLUB
         </Link>
         <br />
         <br />
-        <Link className="options" to="/">
-          GSTAT
-        </Link>
+        <Link>GSTAT</Link>
         <br />
         <br />
-        <Link className="options" to="/">
-          PACKET VIS
-        </Link>
+        <Link>PACKET VIS</Link>
       </div>
     </AnimatedPage>
   )

@@ -1,36 +1,33 @@
-import './styles.css'
 import AnimatedPage from './AnimatedPage'
 import { Suspense, useState } from 'react'
 import { Link } from 'react-router-dom'
+import './styles.css'
 
-const Front = () => {
+const Ux = () => {
   return (
     <AnimatedPage>
       <div
         className="front-end"
         style={{
           position: 'absolute',
-          textAlign: 'center',
           top: '50%',
           left: '50%',
           fontSize: '5vw',
           transform: 'translate(-50%, -50%)'
         }}>
-        <Link className="options" to="/">
-          DEVCLUB
+        <Link className="link" to="/">
+          MUSIC ANIMALS
         </Link>
         <br />
         <br />
-        <Link className="options" to="/">
-          GSTAT
-        </Link>
+        <Link>DEVCLUB</Link>
         <br />
         <br />
-        <Link className="options" to="/">
-          PACKET VIS
-        </Link>
+        <Link>MUSICA</Link>
+        {/* <img className="ux-image" src={require('./images/ux/Logo.png')} alt="ux pic 1" /> */}
       </div>
     </AnimatedPage>
   )
 }
-export default Front
+
+export default Ux
