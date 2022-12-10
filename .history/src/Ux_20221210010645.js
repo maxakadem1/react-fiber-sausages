@@ -1,37 +1,38 @@
 import AnimatedPage from './AnimatedPage'
 import { Suspense, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Cursor } from './App'
-import { motion } from 'framer-motion'
+import './styles.css'
 
-const Art = () => {
+const Ux = () => {
   return (
     <AnimatedPage>
       <div
         className="front-end"
         style={{
           position: 'absolute',
-          textAlign: 'center',
           top: '50%',
           left: '50%',
           fontSize: '5vw',
+          textAlign: 'center',
           transform: 'translate(-50%, -50%)'
         }}>
-        <Link className="options" to="/Art/2020">
-          2020
+        <Link className="options" to="/Ux/musicanimals">
+          MUSIC ANIMALS
         </Link>
         <br />
         <br />
-        <Link className="options" to="/Art/2021">
-          2021
+        <Link className="options" to="/Ux/musicanimals">
+          DEVCLUB
         </Link>
         <br />
         <br />
-        <Link className="options" to="/Art/2022">
-          2022
+        <Link className="options" to="/Ux/musicanimals">
+          MUSICA
         </Link>
+        {/* <img className="ux-image" src={require('./images/ux/Logo.png')} alt="ux pic 1" /> */}
       </div>
     </AnimatedPage>
   )
 }
-export default Art
+
+export default Ux

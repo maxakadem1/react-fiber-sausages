@@ -1,10 +1,9 @@
+import './styles.css'
 import AnimatedPage from './AnimatedPage'
 import { Suspense, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Cursor } from './App'
-import { motion } from 'framer-motion'
 
-const Art = () => {
+const Front = () => {
   return (
     <AnimatedPage>
       <div
@@ -17,21 +16,21 @@ const Art = () => {
           fontSize: '5vw',
           transform: 'translate(-50%, -50%)'
         }}>
-        <Link className="options" to="/Art/2020">
-          2020
+        <Link className="options" to="/devclub">
+          DEVCLUB
         </Link>
         <br />
         <br />
-        <Link className="options" to="/Art/2021">
-          2021
+        <Link className="options" to="/">
+          GSTAT
         </Link>
         <br />
         <br />
-        <Link className="options" to="/Art/2022">
-          2022
+        <Link className="options" to="/">
+          PACKET VIS
         </Link>
       </div>
     </AnimatedPage>
   )
 }
-export default Art
+export default Front

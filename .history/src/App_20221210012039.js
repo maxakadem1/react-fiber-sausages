@@ -35,6 +35,7 @@ export default function App() {
       <Overlay />
 
       <Switch>
+
         <Route path="/frontend">
           <Switch>
             <Route path="/frontend/devclub">
@@ -55,40 +56,18 @@ export default function App() {
         <Route path="/ux">
           <Switch>
             <Route path="/ux/musicanimals">
-              <MusicAnimals />
-            </Route>
-            <Route path="/ux/musica">
-              <Musica />
-            </Route>
-            <Route path="/ux/devclub">
-              <DevClub />
-            </Route>
-            <Route path="/ux/">
-              <Ux />
-            </Route>
-          </Switch>
+
+          <Ux />
         </Route>
 
         <Route path="/art">
-          <Switch>
-            <Route path="/art/2020">
-              <Art2020 />
-            </Route>
-            <Route path="/art/2021">
-              <Art2021 />
-            </Route>
-            <Route path="/art/2022">
-              <Art2022 />
-            </Route>
-            <Route path="/art/">
-              <Art />
-            </Route>
-          </Switch>
+          <Art />
         </Route>
 
         <Route path="/">
           <NameOverlay />
         </Route>
+
       </Switch>
     </Router>
   )

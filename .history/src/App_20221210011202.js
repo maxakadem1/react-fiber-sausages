@@ -11,13 +11,6 @@ import Ux from './Ux'
 import Art from './Art'
 import AnimatedPage from './AnimatedPage'
 import DevClub from './presentation_pages/DevClub'
-import GStat from './presentation_pages/GStat'
-import PacketVis from './presentation_pages/PacketVis'
-import MusicAnimals from './presentation_pages/MusicAnimals'
-import Musica from './presentation_pages/Musica'
-import Art2020 from './presentation_pages/Art2020'
-import Art2021 from './presentation_pages/Art2021'
-import Art2022 from './presentation_pages/Art2022'
 
 export default function App() {
   const [caption, setText] = useState(`HELLO\nI AM\nMAXIM\nABDULKHALIKOV`)
@@ -41,51 +34,22 @@ export default function App() {
               <DevClub />
             </Route>
             <Route path="/frontend/gstat">
-              <GStat />
+              <NameOverlay />
             </Route>
             <Route path="/frontend/packetvis">
-              <PacketVis />
+              <NameOverlay />
             </Route>
             <Route path="/frontend/">
               <Frontend />
             </Route>
           </Switch>
         </Route>
-
         <Route path="/ux">
-          <Switch>
-            <Route path="/ux/musicanimals">
-              <MusicAnimals />
-            </Route>
-            <Route path="/ux/musica">
-              <Musica />
-            </Route>
-            <Route path="/ux/devclub">
-              <DevClub />
-            </Route>
-            <Route path="/ux/">
-              <Ux />
-            </Route>
-          </Switch>
+          <Ux />
         </Route>
-
         <Route path="/art">
-          <Switch>
-            <Route path="/art/2020">
-              <Art2020 />
-            </Route>
-            <Route path="/art/2021">
-              <Art2021 />
-            </Route>
-            <Route path="/art/2022">
-              <Art2022 />
-            </Route>
-            <Route path="/art/">
-              <Art />
-            </Route>
-          </Switch>
+          <Art />
         </Route>
-
         <Route path="/">
           <NameOverlay />
         </Route>
