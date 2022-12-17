@@ -10,7 +10,7 @@ const DevClub = () => {
         transform: 'translate(-50%, -50%)'
       }}>
       <h1>devclub content will be here</h1>
-      <img src="https://drive.google.com/file/d/1YxRe8EKhfh2hQZbULpsnABWvh_mlFH-e/view?usp=share_link" alt="img1" />
+      <img src="https://drive.google.com/file/d/1YxRe8EKhfh2hQZbULpsnABWvh_mlFH-e/view?usp=share_link" alt="" />
     </div>
   )
 }

@@ -1,4 +1,6 @@
-const DevClub = () => {
+import pic1 from './images/music-animals/pic1.jpg'
+
+const MusicAnimals = () => {
   return (
     <div
       style={{
@@ -9,9 +11,9 @@ const DevClub = () => {
         fontSize: '2vw',
         transform: 'translate(-50%, -50%)'
       }}>
-      <h1>devclub content will be here</h1>
-      <img src="https://drive.google.com/file/d/1YxRe8EKhfh2hQZbULpsnABWvh_mlFH-e/view?usp=share_link" alt="img1" />
+      <h1>MusicAnimals content will be here</h1>
+      <img src={pic1} alt="rip pic1" />
     </div>
   )
 }
-export default DevClub
+export default MusicAnimals
