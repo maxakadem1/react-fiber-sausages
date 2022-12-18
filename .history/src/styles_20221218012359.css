@@ -61,7 +61,7 @@ svg {
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 10000000000000000;
+  z-index: 9999;
 }
 
 .cursor--hover {

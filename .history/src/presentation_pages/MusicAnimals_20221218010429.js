@@ -22,10 +22,10 @@ const MusicAnimals = () => {
         style={{
           position: 'absolute',
           textAlign: 'center',
-          top: '0',
+          top: '50%',
           left: '50%',
           fontSize: '2vw',
-          transform: 'translate(-50%, 0)'
+          transform: 'translate(-50%, -50%)'
         }}>
         <div className="image-library" style={{ overflow: 'scroll', scrollBehavior: 'smooth' }}>
           <img className="image-item" src={pic1} alt="img1" />

@@ -169,162 +169,85 @@ function NameOverlay() {
 }
 
 function Overlay() {
+  const [helloText, setText] = useState('HELLO')
+
+  const handleClick = () => {
+    console.log('click')
+    setText('test')
+  }
+  const [cursorX, setCursorX] = useState()
+  const [cursorY, setCursorY] = useState()
+  window.addEventListener('mousemove', (e) => {
+    setCursorX(e.pageX)
+    setCursorY(e.pageY)
+  })
+
   //hover effect for elements
-  const a1Ref = useRef()
-  const a2Ref = useRef()
-  const a3Ref = useRef()
-  const a4Ref = useRef()
-  const a5Ref = useRef()
-  const a6Ref = useRef()
-  const a7Ref = useRef()
-  const a8Ref = useRef()
-
-  const aElements = [
-    {
-      ref: a1Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    },
-    {
-      ref: a2Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    },
-    {
-      ref: a3Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    },
-    {
-      ref: a4Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    },
-    {
-      ref: a5Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    },
-    {
-      ref: a6Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    },
-    {
-      ref: a7Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    },
-    {
-      ref: a8Ref,
-      handleMouseEnter: () => {
-        console.log('mouse enter event')
-        document.querySelector('.cursor').classList.add('cursor--hover')
-      },
-      handleMouseLeave: () => {
-        console.log('mouse leave event')
-        document.querySelector('.cursor').classList.remove('cursor--hover')
-      }
-    }
-  ]
-
+  const aRef = useRef()
   useEffect(() => {
-    aElements.forEach(({ ref, handleMouseEnter, handleMouseLeave }) => {
-      ref.current.addEventListener('mouseenter', handleMouseEnter)
-      ref.current.addEventListener('mouseleave', handleMouseLeave)
+    const handleMouseEnter = () => {
+      document.querySelector('.cursor').classList.add('cursor--hover')
+    }
+    const handleMouseLeave = () => {
+      document.querySelector('.cursor').classList.remove('cursor--hover')
+    }
+    aRef.current.addEventListener('mouseenter', handleMouseEnter)
+    aRef.current.addEventListener('mouseleave', handleMouseLeave)
 
-      return () => {
-        ref.current.removeEventListener('mouseenter', handleMouseEnter)
-        ref.current.removeEventListener('mouseleave', handleMouseLeave)
-      }
-    })
+    return () => {
+      aRef.current.removeEventListener('mouseenter', handleMouseEnter)
+      aRef.current.removeEventListener('mouseleave', handleMouseLeave)
+    }
   }, [])
 
   return (
     <AnimatedPage>
       <div style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-        <Link ref={a1Ref} to="/frontend" style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
+        <Link to="/frontend" style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
           frontend
         </Link>
-        <Link ref={a2Ref} to="/Ux" style={{ position: 'absolute', top: 60, left: 40, fontSize: '13px' }}>
+        <Link to="/Ux" style={{ position: 'absolute', top: 60, left: 40, fontSize: '13px' }}>
           UI/UX design
         </Link>
-        <Link ref={a3Ref} to="/Art" style={{ position: 'absolute', top: 80, left: 40, fontSize: '13px' }}>
+        <Link to="/Art" style={{ position: 'absolute', top: 80, left: 40, fontSize: '13px' }}>
           digital art
         </Link>
         <a
-          ref={a7Ref}
           href="https://drive.google.com/file/d/1VA9ZQAeKW2E_S-GShYx-wdYNhFdHFX1s/view?usp=sharing"
           target={'_blank'}
           style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }}>
           resume
         </a>
-        <Link ref={a4Ref} to="/" style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
+        <Link to="/" style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
           home
         </Link>
         <a
-          ref={a5Ref}
+          ref={aRef}
           href="https://www.linkedin.com/in/abdulkhalikov/"
           target={'_blank'}
           style={{ position: 'absolute', top: 40, right: 40, fontSize: '13px' }}>
           linkedin
         </a>
         <a
-          ref={a6Ref}
+          ref={aRef}
           href="https://github.com/maxakadem1"
           target={'_blank'}
           style={{ position: 'absolute', top: 60, right: 40, fontSize: '13px' }}>
           github
         </a>
         <a
-          ref={a8Ref}
+          ref={aRef}
           href="https://www.instagram.com/max_navern/"
           target={'_blank'}
           style={{ position: 'absolute', top: 80, right: 40, fontSize: '13px' }}>
           instagram
         </a>
+        {/* <div
+          className="cursor"
+          style={{
+            left: cursorX + 'px',
+            top: cursorY + 'px'
+          }}></div> */}
       </div>
     </AnimatedPage>
   )

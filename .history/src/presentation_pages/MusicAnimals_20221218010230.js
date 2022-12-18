@@ -9,23 +9,18 @@ import pic8 from '../images/music-animals/pic8.png'
 import pic9 from '../images/music-animals/pic9.png'
 import '../library-styles.css'
 import AnimatedPage from '../AnimatedPage'
-import React, { useEffect } from 'react'
 
 const MusicAnimals = () => {
-  useEffect(() => {
-    // Scroll to the top of the page when the component is mounted
-    window.scrollTo(0, 0)
-  }, []) // This empty array ensures that the effect only runs once, when the component is mounted
   return (
     <AnimatedPage>
       <div
         style={{
           position: 'absolute',
           textAlign: 'center',
-          top: '0',
+          top: '420%',
           left: '50%',
           fontSize: '2vw',
-          transform: 'translate(-50%, 0)'
+          transform: 'translate(-50%, -50%)'
         }}>
         <div className="image-library" style={{ overflow: 'scroll', scrollBehavior: 'smooth' }}>
           <img className="image-item" src={pic1} alt="img1" />

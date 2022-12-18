@@ -61,10 +61,10 @@ svg {
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 10000000000000000;
+  z-index: 9999;
 }
 
-.cursor--hover {
+a:hover + .cursor {
   transform: translate(-50%, -50%) scale(2);
   /* smooth transition */
   transition: transform 0.2s ease-in-out;

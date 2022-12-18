@@ -295,7 +295,7 @@ function Overlay() {
           digital art
         </Link>
         <a
-          ref={a7Ref}
+          ref={aRef}
           href="https://drive.google.com/file/d/1VA9ZQAeKW2E_S-GShYx-wdYNhFdHFX1s/view?usp=sharing"
           target={'_blank'}
           style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }}>
@@ -319,7 +319,6 @@ function Overlay() {
           github
         </a>
         <a
-          ref={a8Ref}
           href="https://www.instagram.com/max_navern/"
           target={'_blank'}
           style={{ position: 'absolute', top: 80, right: 40, fontSize: '13px' }}>

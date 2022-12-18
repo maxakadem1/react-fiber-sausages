@@ -319,7 +319,6 @@ function Overlay() {
           github
         </a>
         <a
-          ref={a8Ref}
           href="https://www.instagram.com/max_navern/"
           target={'_blank'}
           style={{ position: 'absolute', top: 80, right: 40, fontSize: '13px' }}>
