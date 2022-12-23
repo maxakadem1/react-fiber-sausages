@@ -21,7 +21,6 @@
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 20px;
-  background: 0;
 }
 
 .image-item {
@@ -31,8 +30,4 @@
   position: relative;
   width: 100%;
   margin-bottom: 3vw;
-}
-
-.image-gallery {
-  background: black;
 }

@@ -95,12 +95,14 @@ export default function App() {
 }
 
 function Cursor() {
+  const location = useLocation()
+
   const [cursorX, setCursorX] = useState()
   const [cursorY, setCursorY] = useState()
 
   window.addEventListener('mousemove', (e) => {
-    setCursorX(e.clientX)
-    setCursorY(e.clientY)
+    setCursorX(e.pageX)
+    setCursorY(e.pageY)
   })
 
   return (

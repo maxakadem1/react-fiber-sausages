@@ -264,7 +264,7 @@ function Overlay() {
   }, [])
 
   return (
-    <AnimatedPage>
+    <AnimatedPage style={{ filter: 'blur(5px)' }}>
       <div style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
         <Link ref={a1Ref} to="/frontend" style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>
           frontend

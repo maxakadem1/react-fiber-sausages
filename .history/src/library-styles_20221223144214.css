@@ -21,18 +21,17 @@
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 20px;
-  background: 0;
 }
 
 .image-item {
   flex: 0 0 100%;
-  max-width: 100%;
+  max-width: 60%;
   padding: 0 10px;
   position: relative;
   width: 100%;
   margin-bottom: 3vw;
 }
 
-.image-gallery {
-  background: black;
-}
+/* .image-gallery {
+  backdrop-filter: blur(3px);
+} */

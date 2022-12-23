@@ -17,7 +17,7 @@ const DevClub = () => {
     <AnimatedPage>
       <div>
         <div
-          className="image-gallery-devclub"
+          className="image-gallery"
           style={{
             position: 'absolute',
             textAlign: 'center',

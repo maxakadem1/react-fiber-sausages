@@ -95,13 +95,31 @@ export default function App() {
 }
 
 function Cursor() {
+  const location = useLocation()
+
   const [cursorX, setCursorX] = useState()
   const [cursorY, setCursorY] = useState()
+  const [isScrolling, setIsScrolling] = useState(false)
 
   window.addEventListener('mousemove', (e) => {
-    setCursorX(e.clientX)
-    setCursorY(e.clientY)
+    if (!isScrolling) {
+      setCursorX(e.pageX)
+      setCursorY(e.pageY)
+      console.log(e.pageX, e.pageY)
+    }
   })
+
+  window.addEventListener('scroll', () => {
+    setIsScrolling(true)
+  })
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsScrolling(false)
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [isScrolling])
 
   return (
     <div

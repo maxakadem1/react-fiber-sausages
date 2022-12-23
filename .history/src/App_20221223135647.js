@@ -35,7 +35,7 @@ export default function App() {
       <Overlay />
 
       <Switch>
-        <Route path="/frontend">
+        <Route path="/frontend ">
           <Switch>
             <Route path="/frontend/devclub">
               <DevClub />
@@ -95,12 +95,21 @@ export default function App() {
 }
 
 function Cursor() {
+  const location = useLocation()
+
   const [cursorX, setCursorX] = useState()
   const [cursorY, setCursorY] = useState()
+  const [scrollY, setScrollY] = useState(window.scrollY)
 
   window.addEventListener('mousemove', (e) => {
-    setCursorX(e.clientX)
-    setCursorY(e.clientY)
+    if (window.scrollY === scrollY) {
+      setCursorX(e.pageX)
+      setCursorY(e.pageY)
+    }
+  })
+
+  window.addEventListener('scroll', () => {
+    setScrollY(window.scrollY)
   })
 
   return (
