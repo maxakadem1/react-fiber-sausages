@@ -18,7 +18,13 @@ const MusicAnimals = () => {
   }, []) // This empty array ensures that the effect only runs once, when the component is mounted
   return (
     <AnimatedPage>
-      <div>
+      <div
+        style={
+          {
+            // blur
+            //filter: 'blur(0px)'
+          }
+        }>
         <div
           style={{
             position: 'absolute',

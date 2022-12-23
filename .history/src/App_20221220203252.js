@@ -25,7 +25,7 @@ export default function App() {
   return (
     <Router>
       <Cursor />
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }}>
+      <Canvas className="blur" dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }}>
         <Bg />
         <Suspense fallback={null}>
           <Noodles />

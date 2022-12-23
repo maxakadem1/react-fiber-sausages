@@ -29,6 +29,7 @@ export default function App() {
         <Bg />
         <Suspense fallback={null}>
           <Noodles />
+          {/* <Caption>{caption}</Caption> */}
           <Rig />
         </Suspense>
       </Canvas>
@@ -218,36 +219,44 @@ function Overlay() {
     {
       ref: a5Ref,
       handleMouseEnter: () => {
+        console.log('mouse enter event')
         document.querySelector('.cursor').classList.add('cursor--hover')
       },
       handleMouseLeave: () => {
+        console.log('mouse leave event')
         document.querySelector('.cursor').classList.remove('cursor--hover')
       }
     },
     {
       ref: a6Ref,
       handleMouseEnter: () => {
+        console.log('mouse enter event')
         document.querySelector('.cursor').classList.add('cursor--hover')
       },
       handleMouseLeave: () => {
+        console.log('mouse leave event')
         document.querySelector('.cursor').classList.remove('cursor--hover')
       }
     },
     {
       ref: a7Ref,
       handleMouseEnter: () => {
+        console.log('mouse enter event')
         document.querySelector('.cursor').classList.add('cursor--hover')
       },
       handleMouseLeave: () => {
+        console.log('mouse leave event')
         document.querySelector('.cursor').classList.remove('cursor--hover')
       }
     },
     {
       ref: a8Ref,
       handleMouseEnter: () => {
+        console.log('mouse enter event')
         document.querySelector('.cursor').classList.add('cursor--hover')
       },
       handleMouseLeave: () => {
+        console.log('mouse leave event')
         document.querySelector('.cursor').classList.remove('cursor--hover')
       }
     }

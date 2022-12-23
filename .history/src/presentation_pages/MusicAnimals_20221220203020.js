@@ -18,7 +18,7 @@ const MusicAnimals = () => {
   }, []) // This empty array ensures that the effect only runs once, when the component is mounted
   return (
     <AnimatedPage>
-      <div>
+      <div className="main-div">
         <div
           style={{
             position: 'absolute',

@@ -40,7 +40,7 @@ function Noodle() {
 }
 
 export default function Noodles() {
-  return Array.from({ length: 40 }, (_, i) => <Noodle key={i} />)
+  return Array.from({ length: 55 }, (_, i) => <Noodle key={i} />)
 }
 
 useGLTF.preload('/worm-transformed.glb')
