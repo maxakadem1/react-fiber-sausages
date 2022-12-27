@@ -4,7 +4,7 @@ import pic3 from '../images/devclub/pic3.png'
 import pic4 from '../images/devclub/pic4.png'
 import pic5 from '../images/devclub/pic5.png'
 import pic6 from '../images/devclub/pic6.png'
-import '../library-styles.css'
+import '../styling/library-styles.css'
 import AnimatedPage from '../AnimatedPage'
 import React, { useEffect } from 'react'
 

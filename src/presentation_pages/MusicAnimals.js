@@ -7,7 +7,7 @@ import pic6 from '../images/music-animals/pic6.png'
 import pic7 from '../images/music-animals/pic7.png'
 import pic8 from '../images/music-animals/pic8.png'
 import pic9 from '../images/music-animals/pic9.png'
-import '../library-styles.css'
+import '../styling/library-styles.css'
 import AnimatedPage from '../AnimatedPage'
 import React, { useEffect } from 'react'
 
