@@ -1,0 +1,54 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+@font-face {
+  font-family: 'Raygun';
+  src: url('/src/fonts/raygun.otf');
+}
+@font-face {
+  font-family: 'Ki';
+  src: url('/src/fonts/ki.otf');
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+.image-library {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1800px;
+  padding: 0 20px;
+  background: 0;
+}
+
+.image-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 3vw;
+}
+
+.image-gallery {
+  background: 0;
+  position: absolute;
+  textalign: center;
+  top: 0;
+  left: 50%;
+  fontsize: 2vw;
+  transform: translate(-50%, 0);
+}
+
+/* separate styling for phones */
+@media (max-width: 480px) {
+  .image-item {
+  }
+}
+
+.image-gallery-devclub {
+  background: 0;
+}
