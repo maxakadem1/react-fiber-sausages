@@ -1,16 +1,16 @@
-import pic1 from '../images/packet_vis/pic1.png'
-import pic2 from '../images/packet_vis/pic2.png'
-import pic3 from '../images/packet_vis/pic3.png'
-import pic4 from '../images/packet_vis/pic4.png'
+import pic1 from '../images/umlearn/pic1.png'
+import pic2 from '../images/umlearn/pic2.png'
+import pic3 from '../images/umlearn/pic3.png'
+import pic4 from '../images/umlearn/pic4.png'
 
-import '../styling/library-styles.css'
-import AnimatedPage from '../AnimatedPage'
-import React, { useEffect } from 'react'
-
-const PacketVis = () => {
+const GStat = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component is mounted
     window.scrollTo(0, 0)
+
+    if (location.pathname === '/frontend/devclub') {
+      locationCheck = true
+    }
   }, []) // This empty array ensures that the effect only runs once, when the component is mounted
   return (
     <AnimatedPage>
@@ -25,7 +25,7 @@ const PacketVis = () => {
             fontSize: '2vw',
             transform: 'translate(-50%, 0)'
           }}>
-          <div className="image-library" style={{ overflow: 'hidden ', scrollBehavior: 'smooth' }}>
+          <div className="image-library" style={{ overflow: 'scroll', scrollBehavior: 'smooth' }}>
             <img className="image-item" src={pic1} alt="img1" />
             <img className="image-item" src={pic2} alt="img2" />
             <img className="image-item" src={pic3} alt="img3" />
@@ -36,4 +36,4 @@ const PacketVis = () => {
     </AnimatedPage>
   )
 }
-export default PacketVis
+export default GStat

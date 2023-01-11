@@ -282,7 +282,7 @@ function Overlay() {
           ref={a7Ref}
           href="https://drive.google.com/file/d/1uiQ4YvlmBpsI9dlWJDDexuH1_ceDTMDX/view?usp=sharing"
           target={'_blank'}
-          style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px', mixBlendMode: 'difference' }}>
+          style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px', mixBlendMode: 'difference', color: 'black' }}>
           resume
         </a>
         <Link className="link-app" ref={a4Ref} to="/" style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}>
