@@ -23,9 +23,13 @@ body,
   padding: 0;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   overscroll-behavior-y: none;
-  overflow-y: scroll;
+
   -webkit-overflow-scrolling: touch;
   background: #f5f5f5;
   font-family: 'Inter var', sans-serif;
