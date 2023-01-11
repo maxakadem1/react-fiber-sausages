@@ -100,7 +100,6 @@ svg {
 
 canvas {
   position: fixed;
-  height: 100vh !important;
 }
 
 .options:hover {

@@ -25,9 +25,9 @@ export default function App() {
   const [caption, setText] = useState(`HELLO\nI AM\nMAXIM\nABDULKHALIKOV`)
 
   return (
-    <Router style={{ position: 'fixed' }}>
+    <Router>
       <Cursor />
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }}>
+      <Canvas style={{ position: 'fixed' }} dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }}>
         <Bg />
         <Suspense fallback={null}>
           <Noodles />

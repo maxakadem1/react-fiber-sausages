@@ -23,6 +23,10 @@ body,
   padding: 0;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   overscroll-behavior-y: none;
   overflow-y: scroll;
@@ -100,7 +104,6 @@ svg {
 
 canvas {
   position: fixed;
-  height: 100vh !important;
 }
 
 .options:hover {
