@@ -42,9 +42,8 @@ const DevClub = () => {
             <img className="image-item" src={pic4} alt="img4" style={{ filter: 'brightness(80%)' }} />
             <img className="image-item" src={pic5} alt="img5" style={{ filter: 'brightness(80%)' }} />
             <img className="image-item" src={pic6} alt="img6" style={{ filter: 'brightness(80%)' }} />
-            <a className="link-button" target={'_blank'} style={{ fontSize: '13px' }} href="https://devclub.ca/">
-              link
-            </a>
+            <a href="devclub.ca">link</a>
+            <br />
             <br />
           </div>
         </div>

@@ -46,8 +46,9 @@
 
 /* link-button hover animation */
 .link-button:hover {
-  letter-spacing: 0.1em;
-  transition: letter-spacing 0.2s ease-in-out;
+  background: #000;
+  color: #fff;
+  transition: 0.5s;
 }
 
 /* separate styling for phones */

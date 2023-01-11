@@ -8,6 +8,8 @@ import '../styling/library-styles.css'
 import AnimatedPage from '../AnimatedPage'
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 
 export let locationCheck = false
 
@@ -17,6 +19,32 @@ const DevClub = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component is mounted
     window.scrollTo(0, 0)
+
+    const a1Ref = useRef()
+
+    const aElements = [
+      {
+        ref: a1Ref,
+        handleMouseEnter: () => {
+          document.querySelector('.cursor').classList.add('cursor--hover')
+        },
+        handleMouseLeave: () => {
+          document.querySelector('.cursor').classList.remove('cursor--hover')
+        }
+      }
+    ]
+
+    useEffect(() => {
+      aElements.forEach(({ ref, handleMouseEnter, handleMouseLeave }) => {
+        ref.current.addEventListener('mouseenter', handleMouseEnter)
+        ref.current.addEventListener('mouseleave', handleMouseLeave)
+
+        return () => {
+          ref.current.removeEventListener('mouseenter', handleMouseEnter)
+          ref.current.removeEventListener('mouseleave', handleMouseLeave)
+        }
+      })
+    }, [])
 
     if (location.pathname === '/frontend/devclub') {
       locationCheck = true
@@ -42,9 +70,10 @@ const DevClub = () => {
             <img className="image-item" src={pic4} alt="img4" style={{ filter: 'brightness(80%)' }} />
             <img className="image-item" src={pic5} alt="img5" style={{ filter: 'brightness(80%)' }} />
             <img className="image-item" src={pic6} alt="img6" style={{ filter: 'brightness(80%)' }} />
-            <a className="link-button" target={'_blank'} style={{ fontSize: '13px' }} href="https://devclub.ca/">
+            <a ref={a1Ref} target={'_blank'} style={{ fontSize: '13px' }} href="https://devclub.ca/">
               link
             </a>
+            <br />
             <br />
           </div>
         </div>

@@ -44,10 +44,14 @@
   transform: translate(-50%, 0);
 }
 
-/* link-button hover animation */
+.link-button {
+  text-decoration: none;
+  color: #000;
+}
+
 .link-button:hover {
-  letter-spacing: 0.1em;
-  transition: letter-spacing 0.2s ease-in-out;
+  text-decoration: underline;
+  transition: text-decoration 0.5s ease-in-out;
 }
 
 /* separate styling for phones */
