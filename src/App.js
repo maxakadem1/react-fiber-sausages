@@ -20,12 +20,20 @@ import Art2020 from './presentation_pages/Art2020'
 import Art2021 from './presentation_pages/Art2021'
 import Art2022 from './presentation_pages/Art2022'
 import { locationCheck } from './presentation_pages/DevClub'
+import { Helmet } from 'react-helmet'
+import headerImage from './images/headerImage.png'
 
 export default function App() {
   const [caption, setText] = useState(`HELLO\nI AM\nMAXIM\nABDULKHALIKOV`)
 
   return (
     <Router style={{ position: 'fixed' }}>
+      <Helmet>
+        <meta name="description" content="Personal Portfolio of Maxim Abdulkhalikov. Hope you enjoy!" />
+        {/* a meta tag with headerImage as an image */}
+        <meta property="og:image" content={headerImage} />
+        <meta property="og:title" content="MAXDEV" />
+      </Helmet>
       <Cursor />
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 10], fov: 22 }}>
         <Bg />
